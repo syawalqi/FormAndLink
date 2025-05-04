@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobbies</title>
+  <link rel="stylesheet" href="hobi.css">
+</head>
+<body>
+  <h1>My Hobbies</h1>
+
+  <h2>Hobbies List</h2>
+  <div id="hobiSection">
+    <p><strong>Hobi yang dipilih:</strong></p>
+    <ul id="displayHobiList">
+      <li>Not updated yet</li>
+    </ul>
+  </div>
+
+  <button class="back"><a href="form.html">Back to Form</a></button>
+
+  <script src="profile.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Retrieve hobbies from localStorage
+      const hobi = localStorage.getItem('hobi');
+      
+      // If hobbies exist in localStorage, display them
+      if (hobi) {
+        const hobiList = hobi.split(', '); // Split string back into array
+        const hobiListElement = document.getElementById('displayHobiList');
+        hobiListElement.innerHTML = ''; // Clear default text
+        hobiList.forEach(function(hobby) {
+          const listItem = document.createElement('li');
+          listItem.textContent = hobby;
+          hobiListElement.appendChild(listItem);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

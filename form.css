@@ -1,0 +1,99 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+  }
+  
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  fieldset {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  p {
+    margin-bottom: 15px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea,
+  select,
+  input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-top: 5px;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: auto;
+    margin-top: 10px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  button.back {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  button.back a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  button.back:hover {
+    background-color: #0056b3;
+  }
+  

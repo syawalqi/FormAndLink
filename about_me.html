@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <h1>Profile</h1>
+
+  <h2>About Me</h2>
+  <div id="aboutMeSection">
+    <p><strong>Nama:</strong> <span id="displayNama">Not updated yet</span></p>
+    <p><strong>Email:</strong> <span id="displayEmail">Not updated yet</span></p>
+    <p><strong>Alamat:</strong> <span id="displayAlamat">Not updated yet</span></p>
+    <p><strong>Telepon:</strong> <span id="displayTelepon">Not updated yet</span></p>
+    <p><strong>Jenis Kelamin:</strong> <span id="displayJK">Not updated yet</span></p>
+    <p><strong>Hobi:</strong> <span id="displayHobi">Not updated yet</span></p>
+    <p><strong>Deskripsi Diri:</strong> <span id="displayDeskripsi">Not updated yet</span></p>
+  </div>
+
+  <button class="back"><a href="form.html">Back to Form</a></button>
+
+  <script src="profile.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Retrieve data from localStorage and update the profile section
+      document.getElementById('displayNama').textContent = localStorage.getItem('nama') || 'Not updated yet';
+      document.getElementById('displayEmail').textContent = localStorage.getItem('email') || 'Not updated yet';
+      document.getElementById('displayAlamat').textContent = localStorage.getItem('alamat') || 'Not updated yet';
+      document.getElementById('displayTelepon').textContent = localStorage.getItem('telepon') || 'Not updated yet';
+      document.getElementById('displayJK').textContent = localStorage.getItem('jk') || 'Not updated yet';
+      document.getElementById('displayHobi').textContent = localStorage.getItem('hobi') || 'Not updated yet';
+      document.getElementById('displayDeskripsi').textContent = localStorage.getItem('deskripsi') || 'Not updated yet';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+/* General styling for the About Me page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  h2 {
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  #aboutMeSection {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 800px;
+    margin-top: 20px;
+  }
+  
+  #aboutMeSection p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  #aboutMeSection p strong {
+    font-weight: bold;
+  }
+  
+  .back {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .back:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    #aboutMeSection {
+      width: 80%;
+    }
+  }
+  
