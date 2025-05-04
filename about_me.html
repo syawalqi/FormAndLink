@@ -22,18 +22,20 @@
 
   <button class="back"><a href="form.html">Back to Form</a></button>
 
-  <script src="profile.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Retrieve data from localStorage and update the profile section
-      document.getElementById('displayNama').textContent = localStorage.getItem('nama') || 'Not updated yet';
-      document.getElementById('displayEmail').textContent = localStorage.getItem('email') || 'Not updated yet';
-      document.getElementById('displayAlamat').textContent = localStorage.getItem('alamat') || 'Not updated yet';
-      document.getElementById('displayTelepon').textContent = localStorage.getItem('telepon') || 'Not updated yet';
-      document.getElementById('displayJK').textContent = localStorage.getItem('jk') || 'Not updated yet';
-      document.getElementById('displayHobi').textContent = localStorage.getItem('hobi') || 'Not updated yet';
-      document.getElementById('displayDeskripsi').textContent = localStorage.getItem('deskripsi') || 'Not updated yet';
-    });
+    // Retrieve the data from localStorage
+    const profileData = JSON.parse(localStorage.getItem("profileData"));
+
+    if (profileData) {
+      // Display the data in the respective elements
+      document.getElementById("displayNama").textContent = profileData.name || "Not updated yet";
+      document.getElementById("displayEmail").textContent = profileData.email || "Not updated yet";
+      document.getElementById("displayAlamat").textContent = profileData.alamat || "Not updated yet";
+      document.getElementById("displayTelepon").textContent = profileData.telepon || "Not updated yet";
+      document.getElementById("displayJK").textContent = profileData.jk || "Not updated yet";
+      document.getElementById("displayHobi").textContent = profileData.hobi.length > 0 ? profileData.hobi.join(", ") : "Not updated yet";
+      document.getElementById("displayDeskripsi").textContent = profileData.deskripsi || "Not updated yet";
+    }
   </script>
 </body>
 </html>
