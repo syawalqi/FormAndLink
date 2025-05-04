@@ -15,7 +15,10 @@ document.getElementById("profileForm").addEventListener("submit", function(event
 
   const deskripsi = document.getElementById("deskripsi").value;
   
-  // Save the data to localStorage
+  // Save the hobbies as a comma-separated string in localStorage
+  localStorage.setItem("hobi", hobi.join(', '));  // Save hobbies to localStorage
+
+  // Save the data to localStorage (optional: saving full profile)
   localStorage.setItem("profileData", JSON.stringify({
     name, email, alamat, telepon, jk, hobi, deskripsi
   }));
